@@ -1,6 +1,5 @@
 # Create your views here.
 from django.contrib.auth import login, logout
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.base import TemplateView, RedirectView
@@ -32,3 +31,4 @@ class LogoutView(RedirectView):
 
 class HomeView(LoginRequiredMixin, TemplateView):
     template_name = 'home.html'
+    login_url = '/'

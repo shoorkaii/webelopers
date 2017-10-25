@@ -8,11 +8,14 @@
     <link href="{% static "style.css" %}" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div id="login" class="panel">
+
+<form method="post" id="login" class="panel">
+    {% csrf_token %}
     <div class="panel-logo"></div>
-    <input type="text" placeholder="username">
-    <input type="password" placeholder="password">
+    {{ form.username }}
+    {{ form.password }}
     <button class="panel-submit">login</button>
-</div>
+</form>
+
 </body>
 </html>

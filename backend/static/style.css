@@ -25,7 +25,7 @@ body .panels {
     padding: 1rem;
 }
 
-body .panels input {
+body .panels input, textarea {
 
     display: block;
     width: 100%;
@@ -39,6 +39,10 @@ body .panels input {
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+body .panels textarea {
+    height: 75px;
 }
 
 body .panel .panel-submit {

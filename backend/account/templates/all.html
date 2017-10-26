@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All</title>
+</head>
+<body>
+{% for info in userinfo_list %}
+    <div class="username">{{ info.user.username }}</div>
+    <div class="number">{{ info.phone_number }}</div>
+{% endfor %}
+
+{#{% for info in userinfo_list %}#}
+{#<div class="card" style="width: 20rem;">#}
+{#  <img class="card-img-top" src="{{ info.profile_picture }}" alt="Card image cap">#}
+{#  <div class="card-body">#}
+{#    <h4 class="card-title">{{ info.user.username }}</h4>#}
+{#    <p class="card-text">{{ info.address }}</p>#}
+{#  </div>#}
+{#</div>#}
+{##}
+{#{% endfor %}#}
+
+{#{% if folan %}#}
+{#{% else %}#}
+{#{% endif %}#}
+
+</body>
+</html>

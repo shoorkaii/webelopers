@@ -82,7 +82,11 @@ class ShowUserInfoView(LoginRequiredMixin, ListView):
     model = UserInfo
     template_name = 'all.html'
 
-    def get_context_data(self, **kwargs):
-        context = super(ShowUserInfoView, self).get_context_data(**kwargs)
-        print(context)
-        return context
+    def get_queryset(self):
+        return UserInfo.objects.filter(user=self.request.user).order_by('phone_number')
+
+    # See template variables
+    # def get_context_data(self, **kwargs):
+    #     context = super(ShowUserInfoView, self).get_context_data(**kwargs)
+    #     print(context)
+    #     return context

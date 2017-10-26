@@ -70,3 +70,20 @@ body .panel .panel-logo {
 body .panel input:focus {
     border: 2px solid indianred;
 }
+
+body .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px #c1c1c1 solid;
+    background-color: indianred;
+    padding: 10px 50px;
+    box-sizing: border-box;
+}
+
+body .header .login-btn{
+    position: relative;
+    float: right;
+}

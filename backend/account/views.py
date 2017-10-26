@@ -30,5 +30,5 @@ class LogoutView(RedirectView):
 
 
 class HomeView(LoginRequiredMixin, TemplateView):
-    template_name = 'home.html'
+    template_name = 'post.html'
     login_url = '/'
